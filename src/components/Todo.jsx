@@ -1,12 +1,12 @@
-import './Todo.css';
+import "./Todo.css";
 
-function Todo({ title }) { // from props.title 
-  console.log(title);
+function Todo({ title, onTodoDelete }) {
+  // from props.title
   return (
-      <div className='todo'>
-        <h2>{ title }</h2>
-        <button>Delete</button>
-      </div>
+    <div className="todo">
+      <p>{title}</p>
+      <button onClick={onTodoDelete}>Delete</button>
+    </div>
   );
 }
 
